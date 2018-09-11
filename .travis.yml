@@ -3,5 +3,9 @@ language: node_js
 node_js:
 - 6.9.1
 script: yarn ci
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.9.4
+  - export PATH="$HOME/.yarn/bin:$PATH"
+  - yarn config list
 cache: 
   yarn: true
